@@ -1,0 +1,41 @@
+/* 
+
+Given an integer x, return true if x is palindrome integer.
+
+An integer is a palindrome when it reads the same backward as forward.
+
+For example, 121 is a palindrome while 123 is not
+
+*/
+
+
+
+// wrtitten in javascript
+
+const isPalindrome = (x) => {
+    
+    // first I convert the number to string (temp) to enable easier manipulation
+    // then I stored the reversed version too for comparism
+    
+    let temp = x.toString();
+    let reverse = temp.split("").reverse().join("")
+    
+    
+    let res = true;
+    
+    
+   
+    for (let i=0;i<temp.length;i++)
+        {
+         
+            if(temp[i] != reverse[i])
+                {
+                    // if we ever have to come in here then it is not a palindrome
+                    res = false;
+                    return res;
+                }
+            
+        }
+    
+    return res;
+};
