@@ -1,0 +1,28 @@
+/*Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target*/
+
+// written in javascript
+
+const twoSum = (nums, target) => {
+    
+    let size = nums.length;
+    let res = [];
+    
+    for(let i = 0; i < size; i++)
+        {
+            
+            for(let j = i+1; j<size; j++)
+                {
+                    
+                    
+                   if (nums[i] + nums[j] == target)
+                        {
+                            res.push(i);
+                            res.push(j);
+                            return res;
+                        }
+                     
+                }
+                        
+           
+        }
+};
